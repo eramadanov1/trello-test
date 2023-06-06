@@ -1,0 +1,22 @@
+name: Create README
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  create-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Create README file
+        uses: jamesgeorge007/readme-generator-action@master
+        with:
+          PROJECT_NAME: Trello github test
+          PROJECT_DESCRIPTION: <Your project description>
+          GITHUB_USERNAME: eramadanov1
+          AUTHOR_NAME: eramadanov1
+          AUTHOR_EMAIL: eramadanov1@etf.unsa.ba
+          TWITTER_USERNAME: None
+          WEBSITE_URL: etf.unsa.ba
